@@ -165,7 +165,7 @@ export default function Home() {
         <div className="hero-meta">
           <div>
             <span className="mono">BASED</span>
-            <span className="val">Gabrovo, Bulgaria</span>
+            <span className="val">Sofia, Bulgaria</span>
           </div>
 
           <div>

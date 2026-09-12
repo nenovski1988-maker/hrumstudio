@@ -28,6 +28,7 @@ const work = [
     status: "IN DEVELOPMENT",
     visual: "fill-artiv",
     pending: true,
+      href: "/products/shotfactory",
   },
 ];
 
@@ -66,13 +67,24 @@ const products = [
 function CaseItem({ item }) {
   return (
     <div className="case">
-      <div
-        className={`case-visual ${item.visual} ${
-          item.pending ? "pending" : ""
-        }`}
-      >
-        <span className="tag-corner">{item.status}</span>
-      </div>
+      {item.href ? (
+  <a
+    href={item.href}
+    className={`case-visual ${item.visual} ${
+      item.pending ? "pending" : ""
+    }`}
+  >
+    <span className="tag-corner">{item.status}</span>
+  </a>
+) : (
+  <div
+    className={`case-visual ${item.visual} ${
+      item.pending ? "pending" : ""
+    }`}
+  >
+    <span className="tag-corner">{item.status}</span>
+  </div>
+)}
 
       <div>
         <span className="case-index">{item.index}</span>

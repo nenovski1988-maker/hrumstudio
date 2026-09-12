@@ -146,9 +146,9 @@ export default function Home() {
           </h1>
 
           <p className="hero-lede">
-            I design and build software, websites and digital products that
-            turn ideas into working solutions — from first sketch to shipped
-            product.
+            I design and build custom software, websites and digital products that
+turn ideas into working solutions — from first sketch to shipped
+product.
           </p>
 
           <div className="hero-ctas">

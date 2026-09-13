@@ -20,6 +20,8 @@ const work = [
     tags: ["Built with a collaborator", "Bilingual BG/EN"],
     status: "SHIPPED",
     visual: "fill-muse",
+    href: "https://musematics.com",
+    external: true,
   },
   {
     index: "03 — SHOPARTIV",
@@ -30,6 +32,8 @@ const work = [
     status: "IN DEVELOPMENT",
     visual: "fill-artiv",
     pending: true,
+    href: "https://shopartiv.online",
+    external: true,
   },
 ];
 

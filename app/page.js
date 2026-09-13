@@ -112,9 +112,47 @@ function CaseItem({ item }) {
   );
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://www.hrumstudio.online/#person",
+      name: "Мирослав Неновски",
+      jobTitle: "Software Developer & Product Builder",
+      url: "https://www.hrumstudio.online",
+      image: "https://www.hrumstudio.online/logo.png",
+      worksFor: { "@id": "https://www.hrumstudio.online/#organization" },
+      sameAs: ["https://github.com/nenovski1988-maker"],
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Gabrovo",
+        addressCountry: "BG",
+      },
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://www.hrumstudio.online/#organization",
+      name: "HRUM STUDIO",
+      url: "https://www.hrumstudio.online",
+      logo: "https://www.hrumstudio.online/logo.png",
+      founder: { "@id": "https://www.hrumstudio.online/#person" },
+      email: "hello@hrumstudio.online",
+      description:
+        "Independent software developer and product builder based in Bulgaria. Custom software, websites and digital products.",
+      sameAs: ["https://github.com/nenovski1988-maker"],
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+
       {/* =====================================================
           NAV
       ===================================================== */}

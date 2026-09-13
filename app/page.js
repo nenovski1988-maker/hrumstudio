@@ -9,6 +9,8 @@ const work = [
     tags: ["Bilingual BG/EN", "Corporate site"],
     status: "SHIPPED",
     visual: "fill-kzm",
+    href: "https://kzm.bg",
+    external: true,
   },
   {
     index: "02 — MUSEMATICS",
@@ -73,6 +75,9 @@ function CaseItem({ item }) {
     className={`case-visual ${item.visual} ${
       item.pending ? "pending" : ""
     }`}
+    {...(item.external
+      ? { target: "_blank", rel: "noopener noreferrer" }
+      : {})}
   >
     <span className="tag-corner">{item.status}</span>
   </a>

@@ -132,12 +132,24 @@ export default function ShotFactoryPage() {
         </section>
 
         <section className="product-cta">
-          <span className="mono">HAVE A REPETITIVE WORKFLOW?</span>
-          <h2>Maybe it should be software.</h2>
+          <span className="mono">SHOTFACTORY</span>
 
-          <Link href="/#contact" className="btn btn-primary">
-            Start a project
-          </Link>
+          <h2>See the product.</h2>
+
+          <div className="product-cta-actions">
+            <a
+              href="https://getshotfactory.com"
+              className="btn btn-primary"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Visit ShotFactory →
+            </a>
+
+            <Link href="/#contact" className="btn btn-secondary">
+              Start a project
+            </Link>
+          </div>
         </section>
       </div>
     </main>

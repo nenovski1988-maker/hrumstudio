@@ -28,7 +28,6 @@ const work = [
     status: "IN DEVELOPMENT",
     visual: "fill-artiv",
     pending: true,
-      href: "/products/shotfactory",
   },
 ];
 
@@ -42,6 +41,7 @@ const products = [
     status: "PERSONAL TOOL",
     visual: "fill-shot",
     pending: true,
+    href: "/products/shotfactory",
   },
   {
     index: "02 — DOM-IQ",

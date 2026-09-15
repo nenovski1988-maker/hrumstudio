@@ -292,16 +292,16 @@ product.
         <div className="wrap">
           <div className="ai-note-grid">
 
-            {/* Portrait placeholder */}
+            {/* Portrait */}
 
             <div className="ai-note-portrait">
-              <div className="portrait-placeholder">
-                <span>PHOTO</span>
-
-                <div className="portrait-mark">H</div>
-
-                <small>COMING SOON</small>
-              </div>
+              <Image
+                src="/miro.png"
+                alt="Мирослав Неновски — founder of HRUM STUDIO"
+                width={941}
+                height={1672}
+                className="portrait-photo"
+              />
             </div>
 
 

@@ -9,8 +9,7 @@ const work = [
     tags: ["Bilingual BG/EN", "Corporate site"],
     status: "SHIPPED",
     visual: "fill-kzm",
-    href: "https://kzm.bg",
-    external: true,
+    href: "/work/kzm",
   },
   {
     index: "02 — MUSEMATICS",

@@ -1268,13 +1268,6 @@ footer {
   .portrait-placeholder {
     aspect-ratio: 1 / 1;
   }
-  .portrait-photo {
-  width: 100%;
-  height: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  border: 1px solid var(--line);
-}
 
   .portrait-mark {
     font-size: 95px;

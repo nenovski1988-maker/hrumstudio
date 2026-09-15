@@ -1413,6 +1413,35 @@ footer {
   line-height: 0.98;
   letter-spacing: -0.045em;
 }
+.product-screens {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.product-screens figure {
+  margin: 0;
+}
+
+.product-screens img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid var(--line);
+}
+
+.product-screens figcaption {
+  margin-top: 12px;
+  font-family: var(--font-plex-mono), monospace;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--gray-dim);
+}
+
+.product-screens-narrow img {
+  max-width: 360px;
+}
 
 @media (max-width: 700px) {
   .product-page {

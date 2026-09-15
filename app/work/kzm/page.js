@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "KZM — Corporate Website for Hoof Health Management",
@@ -122,6 +123,54 @@ export default function KzmPage() {
               KZM to present the business and take enquiries from both
               Bulgarian and international clients.
             </p>
+          </div>
+        </section>
+
+        <section className="product-section product-screens-section">
+          <div className="product-section-label">
+            <span className="mono">SCREENSHOTS</span>
+          </div>
+
+          <div className="product-screens">
+            <figure>
+              <Image
+                src="/kzm-hero.png"
+                alt="KZM homepage hero section"
+                width={3803}
+                height={1330}
+              />
+              <figcaption>Homepage hero</figcaption>
+            </figure>
+
+            <figure>
+              <Image
+                src="/kzm-about.png"
+                alt="KZM about section describing hoof health services"
+                width={3785}
+                height={1386}
+              />
+              <figcaption>About / services overview</figcaption>
+            </figure>
+
+            <figure>
+              <Image
+                src="/kzm-gallery.png"
+                alt="KZM media gallery with field photos"
+                width={3806}
+                height={1448}
+              />
+              <figcaption>Media gallery</figcaption>
+            </figure>
+
+            <figure className="product-screens-narrow">
+              <Image
+                src="/kzm-chat.png"
+                alt="KZM AI chat assistant widget"
+                width={716}
+                height={992}
+              />
+              <figcaption>AI chat assistant</figcaption>
+            </figure>
           </div>
         </section>
 

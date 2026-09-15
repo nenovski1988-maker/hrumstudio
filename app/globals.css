@@ -449,6 +449,7 @@ nav .wrap {
 }
 .case-visual-image {
   object-fit: cover;
+  object-position: left center;
 }
 
 .case-index {

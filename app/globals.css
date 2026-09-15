@@ -447,6 +447,9 @@ nav .wrap {
   border-top: none;
   border-left: none;
 }
+.case-visual-image {
+  object-fit: cover;
+}
 
 .case-index {
   display: block;

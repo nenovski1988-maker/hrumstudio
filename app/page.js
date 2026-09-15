@@ -9,6 +9,7 @@ const work = [
     tags: ["Bilingual BG/EN", "Corporate site"],
     status: "SHIPPED",
     visual: "fill-kzm",
+    image: "/kzm-hero.png",
     href: "/work/kzm",
   },
   {
@@ -70,29 +71,40 @@ const products = [
 ];
 
 function CaseItem({ item }) {
+  const visualClass = `case-visual ${item.image ? "" : item.visual} ${
+    item.pending ? "pending" : ""
+  }`;
+
+  const visualInner = (
+    <>
+      {item.image && (
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          sizes="(max-width: 900px) 100vw, 45vw"
+          className="case-visual-image"
+        />
+      )}
+      <span className="tag-corner">{item.status}</span>
+    </>
+  );
+
   return (
     <div className="case">
       {item.href ? (
-  <a
-    href={item.href}
-    className={`case-visual ${item.visual} ${
-      item.pending ? "pending" : ""
-    }`}
-    {...(item.external
-      ? { target: "_blank", rel: "noopener noreferrer" }
-      : {})}
-  >
-    <span className="tag-corner">{item.status}</span>
-  </a>
-) : (
-  <div
-    className={`case-visual ${item.visual} ${
-      item.pending ? "pending" : ""
-    }`}
-  >
-    <span className="tag-corner">{item.status}</span>
-  </div>
-)}
+        <a
+          href={item.href}
+          className={visualClass}
+          {...(item.external
+            ? { target: "_blank", rel: "noopener noreferrer" }
+            : {})}
+        >
+          {visualInner}
+        </a>
+      ) : (
+        <div className={visualClass}>{visualInner}</div>
+      )}
 
       <div>
         <span className="case-index">{item.index}</span>

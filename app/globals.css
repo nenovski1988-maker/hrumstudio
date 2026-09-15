@@ -658,6 +658,14 @@ nav .wrap {
   border: 1px solid var(--line);
 }
 
+.portrait-photo {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--line);
+}
+
 .portrait-placeholder::before {
   content: "";
 

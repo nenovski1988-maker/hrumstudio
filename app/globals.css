@@ -634,6 +634,8 @@ nav .wrap {
   position: sticky;
 
   top: 120px;
+
+  margin-top: 72px;
 }
 
 .portrait-placeholder {
@@ -663,6 +665,7 @@ nav .wrap {
   height: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center 15%;
   border: 1px solid var(--line);
 }
 

@@ -20,6 +20,7 @@ const work = [
     tags: ["Built with a collaborator", "Bilingual BG/EN"],
     status: "SHIPPED",
     visual: "fill-muse",
+    image: "/musematics-hero.png",
     href: "/work/musematics",
   },
   {

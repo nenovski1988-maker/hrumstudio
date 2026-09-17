@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata = {
   title: "Musematics — A Cinematic Story Site",
@@ -120,6 +121,54 @@ export default function MusematicsPage() {
               together with another developer — a rare project where the
               atmosphere mattered as much as the functionality.
             </p>
+          </div>
+        </section>
+
+        <section className="product-section product-screens-section">
+          <div className="product-section-label">
+            <span className="mono">SCREENSHOTS</span>
+          </div>
+
+          <div className="product-screens">
+            <figure>
+              <Image
+                src="/musematics-hero.png"
+                alt="Musematics homepage hero"
+                width={1625}
+                height={759}
+              />
+              <figcaption>Homepage hero</figcaption>
+            </figure>
+
+            <figure>
+              <Image
+                src="/musematics-studio.png"
+                alt="Musematics studio page with audio player"
+                width={1386}
+                height={668}
+              />
+              <figcaption>Studio page &amp; audio player</figcaption>
+            </figure>
+
+            <figure>
+              <Image
+                src="/musematics-book.png"
+                alt="Musematics book-style reading page"
+                width={940}
+                height={816}
+              />
+              <figcaption>Book-style reading page</figcaption>
+            </figure>
+
+            <figure>
+              <Image
+                src="/musematics-contact.png"
+                alt="Musematics contact page"
+                width={1344}
+                height={728}
+              />
+              <figcaption>Contact page</figcaption>
+            </figure>
           </div>
         </section>
 

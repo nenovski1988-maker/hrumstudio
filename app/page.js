@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CaseCarousel from "./components/CaseCarousel";
 
 const work = [
   {
@@ -69,59 +70,6 @@ const products = [
     pending: true,
   },
 ];
-
-function CaseItem({ item }) {
-  const visualClass = `case-visual ${item.image ? "" : item.visual} ${
-    item.pending ? "pending" : ""
-  }`;
-
-  const visualInner = (
-    <>
-      {item.image && (
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          sizes="(max-width: 900px) 100vw, 45vw"
-          className="case-visual-image"
-        />
-      )}
-      <span className="tag-corner">{item.status}</span>
-    </>
-  );
-
-  return (
-    <div className="case">
-      {item.href ? (
-        <a
-          href={item.href}
-          className={visualClass}
-          {...(item.external
-            ? { target: "_blank", rel: "noopener noreferrer" }
-            : {})}
-        >
-          {visualInner}
-        </a>
-      ) : (
-        <div className={visualClass}>{visualInner}</div>
-      )}
-
-      <div>
-        <span className="case-index">{item.index}</span>
-
-        <h3>{item.title}</h3>
-
-        <p>{item.description}</p>
-
-        <div className="case-tags">
-          {item.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -266,9 +214,7 @@ product.
             </p>
           </div>
 
-          {work.map((item) => (
-            <CaseItem key={item.index} item={item} />
-          ))}
+          <CaseCarousel items={work} />
         </div>
       </section>
 
@@ -288,9 +234,7 @@ product.
             </p>
           </div>
 
-          {products.map((item) => (
-            <CaseItem key={item.index} item={item} />
-          ))}
+          <CaseCarousel items={products} />
         </div>
       </section>
 

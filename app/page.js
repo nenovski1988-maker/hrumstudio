@@ -131,7 +131,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#work">WORK</a>
             <a href="#products">PRODUCTS</a>
-            <a href="#help">HELP</a>
+            <a href="#help">FIX &amp; IMPROVE</a>
             <a href="#about">ABOUT</a>
           </div>
 

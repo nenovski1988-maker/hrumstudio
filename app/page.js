@@ -1,4 +1,5 @@
 import Image from "next/image";
+import CaseCarousel from "./components/CaseCarousel";
 
 const work = [
   {
@@ -20,8 +21,8 @@ const work = [
     tags: ["Built with a collaborator", "Bilingual BG/EN"],
     status: "SHIPPED",
     visual: "fill-muse",
-    href: "https://musematics.com",
-    external: true,
+    image: "/musematics-hero.png",
+    href: "/work/musematics",
   },
   {
     index: "03 — SHOPARTIV",
@@ -69,59 +70,6 @@ const products = [
     pending: true,
   },
 ];
-
-function CaseItem({ item }) {
-  const visualClass = `case-visual ${item.image ? "" : item.visual} ${
-    item.pending ? "pending" : ""
-  }`;
-
-  const visualInner = (
-    <>
-      {item.image && (
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          sizes="(max-width: 900px) 100vw, 45vw"
-          className="case-visual-image"
-        />
-      )}
-      <span className="tag-corner">{item.status}</span>
-    </>
-  );
-
-  return (
-    <div className="case">
-      {item.href ? (
-        <a
-          href={item.href}
-          className={visualClass}
-          {...(item.external
-            ? { target: "_blank", rel: "noopener noreferrer" }
-            : {})}
-        >
-          {visualInner}
-        </a>
-      ) : (
-        <div className={visualClass}>{visualInner}</div>
-      )}
-
-      <div>
-        <span className="case-index">{item.index}</span>
-
-        <h3>{item.title}</h3>
-
-        <p>{item.description}</p>
-
-        <div className="case-tags">
-          {item.tags.map((tag) => (
-            <span key={tag}>{tag}</span>
-          ))}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -183,6 +131,7 @@ export default function Home() {
           <div className="nav-links">
             <a href="#work">WORK</a>
             <a href="#products">PRODUCTS</a>
+            <a href="#help">HELP</a>
             <a href="#about">ABOUT</a>
           </div>
 
@@ -266,9 +215,7 @@ product.
             </p>
           </div>
 
-          {work.map((item) => (
-            <CaseItem key={item.index} item={item} />
-          ))}
+          <CaseCarousel items={work} />
         </div>
       </section>
 
@@ -288,9 +235,71 @@ product.
             </p>
           </div>
 
-          {products.map((item) => (
-            <CaseItem key={item.index} item={item} />
-          ))}
+          <CaseCarousel items={products} />
+        </div>
+      </section>
+
+
+      {/* =====================================================
+          WHAT I CAN DO FOR YOU
+      ===================================================== */}
+
+      <section className="work capabilities" id="help">
+        <div className="wrap">
+          <div className="work-head">
+            <h2>What I can do for you.</h2>
+
+            <p>
+              Not every project starts from zero. Some of the best work is
+              making what you already have actually work.
+            </p>
+          </div>
+
+          <div className="product-features">
+            <div className="product-feature">
+              <span className="feature-number">01</span>
+              <h3>SEO &amp; visibility</h3>
+              <p>
+                Technical SEO, structured data, sitemaps, Search Console —
+                the boring work that actually gets you found.
+              </p>
+            </div>
+
+            <div className="product-feature">
+              <span className="feature-number">02</span>
+              <h3>Hosting &amp; deployment</h3>
+              <p>
+                Getting your site properly online, fast, and set up to
+                update itself when you push changes.
+              </p>
+            </div>
+
+            <div className="product-feature">
+              <span className="feature-number">03</span>
+              <h3>Business email &amp; domain setup</h3>
+              <p>
+                A working @yourdomain email and DNS that doesn&apos;t break
+                when you touch it.
+              </p>
+            </div>
+
+            <div className="product-feature">
+              <span className="feature-number">04</span>
+              <h3>Admin panels &amp; easier management</h3>
+              <p>
+                A simple back-office so you can update products, prices or
+                content without calling a developer every time.
+              </p>
+            </div>
+          </div>
+
+          <div className="capabilities-cta">
+            <p>Don&apos;t see what you need here? Tell me what&apos;s not working.</p>
+
+            <a className="btn btn-primary" href="#contact">
+              Start a project
+            </a>
+          </div>
         </div>
       </section>
 

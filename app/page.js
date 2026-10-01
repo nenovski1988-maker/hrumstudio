@@ -68,7 +68,9 @@ const products = [
     tags: ["PWA", "Real-time sync"],
     status: "BETA",
     visual: "fill-family",
+    logo: "/family-rhythm-logo.png",
     pending: true,
+    href: "/products/family-rhythm",
   },
 ];
 

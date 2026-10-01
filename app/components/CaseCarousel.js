@@ -4,9 +4,11 @@ import { useRef, useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 
 function CaseItem({ item }) {
-  const visualClass = `case-visual ${item.image ? "" : item.visual} ${
-    item.pending ? "pending" : ""
-  } ${item.logo ? "case-visual-logo-mode" : ""}`;
+  const visualClass = `case-visual ${
+    item.image || item.logo ? "" : item.visual
+  } ${item.pending ? "pending" : ""} ${
+    item.logo ? "case-visual-logo-mode" : ""
+  }`;
 
   const visualInner = (
     <>

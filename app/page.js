@@ -47,6 +47,7 @@ const products = [
     tags: ["Windows desktop", "AI background removal", "C#"],
     status: "PERSONAL TOOL",
     visual: "fill-shot",
+    logo: "/shotfactory-logo.png",
     pending: true,
     href: "/products/shotfactory",
   },

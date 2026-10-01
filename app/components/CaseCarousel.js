@@ -6,18 +6,30 @@ import Image from "next/image";
 function CaseItem({ item }) {
   const visualClass = `case-visual ${item.image ? "" : item.visual} ${
     item.pending ? "pending" : ""
-  }`;
+  } ${item.logo ? "case-visual-logo-mode" : ""}`;
 
   const visualInner = (
     <>
-      {item.image && (
-        <Image
-          src={item.image}
-          alt={item.title}
-          fill
-          sizes="(max-width: 900px) 100vw, 45vw"
-          className="case-visual-image"
-        />
+      {item.logo ? (
+        <span className="case-visual-logo">
+          <Image
+            src={item.logo}
+            alt={item.title}
+            width={160}
+            height={160}
+            className="case-visual-logo-image"
+          />
+        </span>
+      ) : (
+        item.image && (
+          <Image
+            src={item.image}
+            alt={item.title}
+            fill
+            sizes="(max-width: 900px) 100vw, 45vw"
+            className="case-visual-image"
+          />
+        )
       )}
       <span className="tag-corner">{item.status}</span>
     </>

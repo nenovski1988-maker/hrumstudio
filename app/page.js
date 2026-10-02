@@ -26,13 +26,13 @@ const work = [
   },
   {
     index: "03 — SHOPARTIV",
-    title: "E-commerce, currently in the making.",
+    title: "E-commerce for handmade wood and ceramics.",
     description:
-      "A full e-commerce platform for handmade wooden and ceramic products — storefront, admin panel and order management, built end to end. Launching soon.",
-    tags: ["E-commerce", "Coming soon"],
-    status: "IN DEVELOPMENT",
+      "A full e-commerce platform for handmade wooden and ceramic products — storefront with a featured-products carousel, catalog, personalisation options and a custom admin panel for order management, built end to end.",
+    tags: ["E-commerce", "Next.js"],
+    status: "SHIPPED",
     visual: "fill-artiv",
-    pending: true,
+    image: "/shopartiv-hero.jpg",
     href: "https://shopartiv.online",
     external: true,
   },

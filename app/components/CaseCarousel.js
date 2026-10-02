@@ -30,6 +30,7 @@ function CaseItem({ item }) {
             fill
             sizes="(max-width: 900px) 100vw, 45vw"
             className="case-visual-image"
+            style={{ objectPosition: item.imagePosition || "center" }}
           />
         )
       )}

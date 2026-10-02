@@ -11,6 +11,7 @@ const work = [
     status: "SHIPPED",
     visual: "fill-kzm",
     image: "/kzm-hero.png",
+    imagePosition: "left center",
     href: "/work/kzm",
   },
   {

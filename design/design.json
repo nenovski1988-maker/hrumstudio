@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-29T12:00:00+02:00",
+  "title": "Design System: HRUM STUDIO",
+  "extensions": {
+    "colorMeta": {
+      "mint": { "role": "primary", "displayName": "Ledger Mint", "canonical": "#3FE2AC", "tonalRamp": ["oklch(25% 0.05 165)", "oklch(35% 0.08 165)", "oklch(47% 0.11 165)", "oklch(62% 0.13 165)", "oklch(72% 0.15 165)", "oklch(81% 0.16 165)", "oklch(89% 0.10 165)", "oklch(95% 0.05 165)"] },
+      "mint-dark": { "role": "primary", "displayName": "Deep Mint (declared, unused)", "canonical": "#1E9E76", "tonalRamp": ["oklch(22% 0.04 165)", "oklch(32% 0.07 165)", "oklch(44% 0.10 165)", "oklch(54% 0.12 165)", "oklch(62% 0.13 165)", "oklch(74% 0.12 165)", "oklch(86% 0.08 165)", "oklch(94% 0.04 165)"] },
+      "charcoal": { "role": "neutral", "displayName": "Workshop Charcoal", "canonical": "#17191B", "tonalRamp": ["oklch(15% 0.004 230)", "oklch(21% 0.005 230)", "oklch(30% 0.006 230)", "oklch(42% 0.006 230)", "oklch(55% 0.006 230)", "oklch(68% 0.005 230)", "oklch(82% 0.004 230)", "oklch(95% 0.002 230)"] },
+      "charcoal-raised": { "role": "neutral", "displayName": "Raised Charcoal", "canonical": "#1E2124", "tonalRamp": ["oklch(15% 0.005 240)", "oklch(24% 0.006 240)", "oklch(33% 0.007 240)", "oklch(45% 0.007 240)", "oklch(57% 0.006 240)", "oklch(70% 0.005 240)", "oklch(83% 0.004 240)", "oklch(95% 0.002 240)"] },
+      "line": { "role": "neutral", "displayName": "Hairline", "canonical": "#31353798", "tonalRamp": ["oklch(15% 0.006 220)", "oklch(25% 0.007 220)", "oklch(32% 0.007 220)", "oklch(44% 0.007 220)", "oklch(56% 0.006 220)", "oklch(69% 0.005 220)", "oklch(82% 0.004 220)", "oklch(95% 0.002 220)"] },
+      "off-white": { "role": "neutral", "displayName": "Paper White", "canonical": "#F6F6F3", "tonalRamp": ["oklch(15% 0.003 106)", "oklch(28% 0.004 106)", "oklch(42% 0.004 106)", "oklch(56% 0.004 106)", "oklch(70% 0.004 106)", "oklch(83% 0.004 106)", "oklch(92% 0.004 106)", "oklch(97% 0.004 106)"] },
+      "gray": { "role": "neutral", "displayName": "Graphite Gray", "canonical": "#B9BDB8", "tonalRamp": ["oklch(15% 0.005 135)", "oklch(27% 0.006 135)", "oklch(40% 0.007 135)", "oklch(53% 0.008 135)", "oklch(66% 0.008 135)", "oklch(78% 0.008 135)", "oklch(88% 0.006 135)", "oklch(95% 0.003 135)"] },
+      "gray-dim": { "role": "neutral", "displayName": "Dim Gray", "canonical": "#7C807D", "tonalRamp": ["oklch(15% 0.004 150)", "oklch(25% 0.005 150)", "oklch(36% 0.006 150)", "oklch(47% 0.007 150)", "oklch(59% 0.007 150)", "oklch(72% 0.006 150)", "oklch(85% 0.004 150)", "oklch(95% 0.002 150)"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only." },
+      "display-closing": { "displayName": "Display Closing", "purpose": "Final \"Let's build it.\" CTA heading, centered." },
+      "headline": { "displayName": "Headline", "purpose": "Homepage section heads." },
+      "headline-soft": { "displayName": "Headline Soft", "purpose": "Pull quote and product-page section heads." },
+      "title": { "displayName": "Title", "purpose": "Case titles in the carousel." },
+      "title-small": { "displayName": "Title Small", "purpose": "Feature-cell headings." },
+      "lede": { "displayName": "Lede", "purpose": "Hero intro paragraph." },
+      "body-long": { "displayName": "Body Long", "purpose": "Long-form copy (AI note, product sections)." },
+      "body": { "displayName": "Body", "purpose": "Case descriptions." },
+      "button": { "displayName": "Button", "purpose": "Primary and secondary button labels." },
+      "label": { "displayName": "Label", "purpose": "The .mono utility: indices, meta labels, counter." },
+      "label-caps": { "displayName": "Label Caps", "purpose": "Uppercase mono: nav links, nav CTA, eyebrows, captions, footer." }
+    },
+    "shadows": [],
+    "effects": [
+      { "name": "nav-glass", "value": "background: rgba(23, 25, 27, 0.94); backdrop-filter: blur(14px);", "purpose": "Sticky navigation bar; the only translucent surface." },
+      { "name": "paper-texture", "value": "background-image: url(/texture.png); background-size: 620px 620px; background-blend-mode: soft-light;", "purpose": "Material grain on the body background." },
+      { "name": "hero-mark-mask", "value": "mask-image: radial-gradient(ellipse 62% 62% at 58% 46%, #000 60%, transparent 88%);", "purpose": "Fades the hero 3D wordmark into the page." }
+    ],
+    "motion": [
+      { "name": "state-default", "value": "0.2s ease", "purpose": "Color, background and border-color transitions on links, buttons, nav CTA and carousel arrows." },
+      { "name": "state-contact", "value": "0.25s ease", "purpose": "Contact link background, color and transform." },
+      { "name": "lift", "value": "transform: translateY(-2px)", "purpose": "Contact link hover only." },
+      { "name": "smooth-scroll", "value": "scroll-behavior: smooth", "purpose": "In-page anchor navigation and carousel arrow scrolling." }
+    ],
+    "breakpoints": [
+      { "name": "tablet", "value": "950px" },
+      { "name": "mobile", "value": "700px" },
+      { "name": "small-mobile", "value": "420px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Mint-filled rectangular button for the main action.",
+      "html": "<a class=\"ds-btn-primary\" href=\"#\">See what I've built</a>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border: 1px solid transparent; border-radius: 0; background: var(--mint, #3FE2AC); color: var(--charcoal, #17191B); font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease; } .ds-btn-primary:hover { background: var(--off-white, #F6F6F3); }"
+    },
+    {
+      "name": "Secondary Button",
+      "kind": "button",
+      "refersTo": "button-secondary",
+      "description": "Transparent hairline-bordered button for the secondary action.",
+      "html": "<a class=\"ds-btn-secondary\" href=\"#\">Start a project</a>",
+      "css": ".ds-btn-secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 24px; border: 1px solid var(--line, #31353798); border-radius: 0; background: transparent; color: var(--off-white, #F6F6F3); font-family: 'IBM Plex Sans', sans-serif; font-size: 14px; font-weight: 500; text-decoration: none; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease; } .ds-btn-secondary:hover { border-color: var(--gray, #B9BDB8); }"
+    },
+    {
+      "name": "Outlined Mint CTA",
+      "kind": "button",
+      "refersTo": "button-outline-mint",
+      "description": "Nav CTA: mint outline and mono caps, inverts to a mint fill on hover.",
+      "html": "<a class=\"ds-btn-outline-mint\" href=\"#\">Start a project</a>",
+      "css": ".ds-btn-outline-mint { display: inline-flex; align-items: center; justify-content: center; min-height: 42px; padding: 0 18px; border: 1px solid var(--mint, #3FE2AC); border-radius: 0; background: transparent; color: var(--mint, #3FE2AC); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; } .ds-btn-outline-mint:hover { background: var(--mint, #3FE2AC); color: var(--charcoal, #17191B); }"
+    },
+    {
+      "name": "Contact Link",
+      "kind": "button",
+      "refersTo": "contact-link",
+      "description": "Large mono email link in the closing CTA; inverts and lifts 2px on hover.",
+      "html": "<a class=\"ds-contact-link\" href=\"mailto:hello@hrumstudio.online\">hello@hrumstudio.online</a>",
+      "css": ".ds-contact-link { display: inline-flex; align-items: center; justify-content: center; min-height: 62px; padding: 0 30px; border: 1px solid var(--mint, #3FE2AC); border-radius: 0; color: var(--mint, #3FE2AC); font-family: 'IBM Plex Mono', monospace; font-size: clamp(15px, 1.8vw, 21px); letter-spacing: 0.02em; text-decoration: none; transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease; } .ds-contact-link:hover { background: var(--mint, #3FE2AC); color: var(--charcoal, #17191B); transform: translateY(-2px); }"
+    },
+    {
+      "name": "Navigation Bar",
+      "kind": "nav",
+      "refersTo": "nav-bar",
+      "description": "Sticky translucent bar: logo, mono caps links, outlined mint CTA.",
+      "html": "<nav class=\"ds-nav\"><span class=\"ds-nav-logo\">HRUM.</span><div class=\"ds-nav-links\"><a href=\"#\">Work</a><a href=\"#\">Products</a><a href=\"#\">Fix &amp; Improve</a><a href=\"#\">About</a></div><a class=\"ds-nav-cta\" href=\"#\">Start a project</a></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 30px; height: 84px; padding: 0 48px; background: rgba(23, 25, 27, 0.94); backdrop-filter: blur(14px); border-bottom: 1px solid var(--line, #31353798); } .ds-nav-logo { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 24px; color: var(--off-white, #F6F6F3); } .ds-nav-links { display: flex; gap: 40px; margin-left: auto; margin-right: 40px; } .ds-nav-links a { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray, #B9BDB8); text-decoration: none; transition: color 0.2s ease; } .ds-nav-links a:hover { color: var(--off-white, #F6F6F3); } .ds-nav-cta { display: inline-flex; align-items: center; min-height: 42px; padding: 0 18px; border: 1px solid var(--mint, #3FE2AC); color: var(--mint, #3FE2AC); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: none; transition: background 0.2s ease, color 0.2s ease; } .ds-nav-cta:hover { background: var(--mint, #3FE2AC); color: var(--charcoal, #17191B); }"
+    },
+    {
+      "name": "Tag List",
+      "kind": "chip",
+      "refersTo": "tag-list",
+      "description": "Rule-separated mono words instead of chips.",
+      "html": "<div class=\"ds-tags\"><span>Bilingual BG/EN</span><span>Corporate site</span><span>Next.js</span></div>",
+      "css": ".ds-tags { display: flex; flex-wrap: wrap; row-gap: 10px; } .ds-tags span { padding: 0 16px; border-left: 1px solid var(--line, #31353798); font-family: 'IBM Plex Mono', monospace; font-size: 12px; color: var(--gray-dim, #7C807D); } .ds-tags span:first-child { padding-left: 0; border-left: none; }"
+    },
+    {
+      "name": "Project Visual with Status Stamp",
+      "kind": "card",
+      "refersTo": "status-tag",
+      "description": "4:3 raised-charcoal box with hairline border and a mint status stamp flush in the top-left corner; pending variant shown second.",
+      "html": "<div class=\"ds-visual\"><span class=\"ds-stamp\">SHIPPED</span></div><div class=\"ds-visual ds-visual-pending\"><span class=\"ds-stamp\">BETA</span></div>",
+      "css": ".ds-visual { position: relative; width: 280px; aspect-ratio: 4 / 3; margin-bottom: 16px; overflow: hidden; background: var(--charcoal-2, #1E2124) repeating-linear-gradient(0deg, #23262900 0 20px, #ffffff07 20px 21px); border: 1px solid var(--line, #31353798); } .ds-stamp { position: absolute; top: 0; left: 0; padding: 6px 10px; background: var(--mint, #3FE2AC); color: var(--charcoal, #17191B); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.05em; } .ds-visual-pending .ds-stamp { background: var(--charcoal, #17191B); color: var(--gray, #B9BDB8); border: 1px solid var(--line, #31353798); border-top: none; border-left: none; }"
+    },
+    {
+      "name": "Feature Grid",
+      "kind": "card",
+      "refersTo": "feature-cell",
+      "description": "Two-column grid of numbered cells whose 1px gaps draw hairline grid lines.",
+      "html": "<div class=\"ds-features\"><div class=\"ds-feature\"><span class=\"ds-feature-num\">01</span><h3>SEO &amp; visibility</h3><p>Technical SEO, structured data, sitemaps, Search Console.</p></div><div class=\"ds-feature\"><span class=\"ds-feature-num\">02</span><h3>Hosting &amp; deployment</h3><p>Getting your site properly online, fast.</p></div></div>",
+      "css": ".ds-features { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: var(--line, #31353798); } .ds-feature { min-height: 250px; padding: 32px; background: var(--charcoal, #17191B); } .ds-feature-num { display: block; margin-bottom: 60px; color: var(--mint, #3FE2AC); font-family: 'IBM Plex Mono', monospace; font-size: 12px; } .ds-feature h3 { margin: 0 0 12px; font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 500; color: var(--off-white, #F6F6F3); } .ds-feature p { margin: 0; font-family: 'IBM Plex Sans', sans-serif; font-size: 15px; line-height: 1.6; color: var(--gray, #B9BDB8); }"
+    },
+    {
+      "name": "Carousel Controls",
+      "kind": "custom",
+      "refersTo": "carousel-arrow",
+      "description": "Mono counter plus square hairline arrow buttons; mint on hover, 30% opacity when disabled.",
+      "html": "<div class=\"ds-carousel-controls\"><span class=\"ds-carousel-count\">01 — 03</span><button class=\"ds-carousel-arrow\" type=\"button\" disabled aria-label=\"Previous\">←</button><button class=\"ds-carousel-arrow\" type=\"button\" aria-label=\"Next\">→</button></div>",
+      "css": ".ds-carousel-controls { display: flex; align-items: center; justify-content: flex-end; gap: 8px; } .ds-carousel-count { margin-right: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.02em; color: var(--gray-dim, #7C807D); } .ds-carousel-arrow { width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center; border: 1px solid var(--line, #31353798); border-radius: 0; background: transparent; color: var(--off-white, #F6F6F3); font-size: 16px; cursor: pointer; transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease; } .ds-carousel-arrow:hover:not(:disabled) { border-color: var(--mint, #3FE2AC); color: var(--mint, #3FE2AC); } .ds-carousel-arrow:disabled { opacity: 0.3; cursor: default; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Workshop Ledger",
+    "overview": "The site reads like a working ledger from a one-person workshop. Every entry is numbered (`01 — KZM`, `02`, `03`), stamped with a status (`SHIPPED`, `LIVE`, `BETA`, `PERSONAL TOOL`) and separated from the next by a hairline rule. The voice is factual and slightly dry: monospaced labels carry the metadata, a tight grotesk carries the claims, and a humanist sans carries the explanation. Nothing is decorated for its own sake. The decoration that does exist (paper texture, faint diagonal hatching, one mint line through a visual) looks like marks on a drafting sheet.\n\nDensity is low and the rhythm is generous. Sections open with 150px of air, headlines are very large and tightly tracked, and body copy stays in narrow measures (340–480px for supporting text, 650–760px for long-form). The page is one dark surface (warm charcoal with a soft-light paper texture). Structure comes from 1px rules and from swapping between two near-identical charcoals, never from cards floating on shadows.\n\nColor is used like a highlighter in a ledger. Mint marks what is done, live, or clickable: status stamps, the primary button, outlined CTAs, accent rules, feature numbers, the quote attribution. Everything else is off-white, gray, or dim gray on charcoal.",
+    "keyCharacteristics": [
+      "Single dark theme: charcoal (#17191B) ground with a repeating paper texture blended in soft-light.",
+      "One accent, mint (#3FE2AC). It never appears as a large field except on small buttons and stamps.",
+      "Hairline structure: 1px rules in a translucent line color divide every section, case and footer.",
+      "Square corners everywhere. There is no border-radius anywhere in the system.",
+      "Flat: no box-shadows. Depth comes from the sticky nav's blur and from the two charcoal tones.",
+      "Three-font system: Space Grotesk for headings, IBM Plex Sans for body, IBM Plex Mono for every label, index, tag and metadata line.",
+      "Numbered, stamped entries (`0X — NAME` index, status tag in the top-left corner of the visual)."
+    ],
+    "rules": [
+      { "name": "The Highlighter Rule", "body": "Mint marks state or action only: done, live, clickable, numbered. It is never used for headings, body text, or large background areas.", "section": "colors" },
+      { "name": "The Two-Charcoal Rule", "body": "Surfaces differ by one step at most: charcoal (#17191B) for the page, raised charcoal (#1E2124) for inset visuals. There is no third surface color.", "section": "colors" },
+      { "name": "The Mono-for-Metadata Rule", "body": "Anything that is a label, index, tag, status, count, date, caption or footer line is set in IBM Plex Mono. Sentences are never mono except the email address in the contact link.", "section": "typography" },
+      { "name": "The Negative-Tracking Rule", "body": "Every Space Grotesk heading is tracked tighter than normal (-0.025em at title size up to -0.06em at closing size). The bigger the type, the tighter the tracking.", "section": "typography" },
+      { "name": "The Peek Rule", "body": "Horizontal sets always show a sliver of the next item on desktop and tablet so the visitor knows there is more. On phones the peek is dropped and the slide fills the width.", "section": "layout" },
+      { "name": "The Ruled-Not-Raised Rule", "body": "Separation is drawn with 1px Hairline rules or 1px grid gaps, never with shadows or floating cards. If something needs to stand apart, give it a border or the raised charcoal, not elevation.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep every corner square (0px). Buttons, visuals, cells and stamps all share it.",
+      "Do separate content with 1px Hairline (`#31353798`) rules or 1px grid gaps.",
+      "Do set labels, indices, statuses, tags, counters, captions and the footer in IBM Plex Mono, usually Dim Gray and often uppercase with positive tracking (0.04–0.14em).",
+      "Do track Space Grotesk headings negatively, from -0.025em (34px titles) to -0.06em (closing display).",
+      "Do keep supporting copy in narrow measures: 340px for section intros, 460–480px for descriptions and ledes, 650–760px for long-form.",
+      "Do use mint for state and action only: the primary button, outlined CTAs, status stamps, 2px accent rules, feature numbers, attribution.",
+      "Do number entries in the `0X — NAME` pattern and stamp them with a status.",
+      "Do use the hover inversion (transparent + mint border → mint fill + charcoal text) for outlined mint CTAs."
+    ],
+    "donts": [
+      "Don't add box-shadows or floating cards. The system is flat by construction.",
+      "Don't introduce a border-radius or pill shapes. Tags are rule-separated words, not chips.",
+      "Don't use mint for headings, paragraphs or large background fields.",
+      "Don't add a third surface color beyond charcoal (#17191B) and raised charcoal (#1E2124).",
+      "Don't reuse the styles in `app/page.module.css` (Geist fonts, rounded pill buttons, light theme). That file is leftover `create-next-app` boilerplate, is not imported anywhere, and is not part of this system."
+    ]
+  }
+}

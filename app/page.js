@@ -73,6 +73,17 @@ const products = [
     pending: true,
     href: "/products/family-rhythm",
   },
+  {
+    index: "04 — INBOX RADAR",
+    title: "Your inbox, sorted before your first coffee.",
+    description:
+      "An AI email assistant set up for your Gmail — a morning brief of the emails that matter, tasks from email, drafted replies and automatic cleanup of ads and spam. Set up and tuned to your senders, bank and subscriptions.",
+    tags: ["AI assistant", "Gmail", "Setup service"],
+    status: "AVAILABLE",
+    visual: "fill-radar",
+    image: "/inbox-radar-hero.png",
+    href: "/products/inbox-radar",
+  },
 ];
 
 const structuredData = {

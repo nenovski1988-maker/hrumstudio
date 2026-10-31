@@ -737,6 +737,28 @@ nav .wrap {
     );
 }
 
+.fill-radar {
+  background:
+    radial-gradient(
+      circle at 64% 38%,
+      var(--mint) 0,
+      var(--mint) 3px,
+      transparent 4px
+    ),
+    linear-gradient(
+      125deg,
+      transparent 49.7%,
+      var(--mint) 49.7%,
+      var(--mint) 50.1%,
+      transparent 50.1%
+    ),
+    repeating-radial-gradient(
+      circle at 50% 50%,
+      #23262900 0 30px,
+      #ffffff08 30px 31px
+    );
+}
+
 
 /* =========================================================
    HOW I BUILD

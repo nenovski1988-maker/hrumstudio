@@ -6,8 +6,8 @@ const work = [
     index: "01 — KZM",
     title: "Corporate site for hoof health management.",
     description:
-      "A bilingual Bulgarian/English business website — services, process, media gallery and contact — built for a company specialising in cattle hoof health management.",
-    tags: ["Bilingual BG/EN", "Corporate site"],
+      "A bilingual Bulgarian/English business website for a company specialising in cattle hoof health management — redesigned in November 2026 with a before/after hoof comparison, a field gallery and privacy-first cookie consent.",
+    tags: ["Bilingual BG/EN", "Corporate site", "Redesign 2026"],
     status: "SHIPPED",
     visual: "fill-kzm",
     image: "/kzm-hero.png",

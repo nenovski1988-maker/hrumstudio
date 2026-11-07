@@ -4,14 +4,14 @@ import Image from "next/image";
 export const metadata = {
   title: "KZM — Corporate Website for Hoof Health Management",
   description:
-    "A bilingual Bulgarian/English corporate website built for KZM, a company specialising in cattle hoof health management — services, process, media gallery and contact.",
+    "A bilingual Bulgarian/English corporate website built for KZM, a company specialising in cattle hoof health management — services, process, media gallery and contact — redesigned in 2026 with a full English version, before/after comparison and cookie consent.",
   alternates: {
     canonical: "https://www.hrumstudio.online/work/kzm",
   },
   openGraph: {
     title: "KZM — Corporate Website for Hoof Health Management",
     description:
-      "A bilingual Bulgarian/English business website — services, process, media gallery and contact — built for a hoof health management company.",
+      "A bilingual Bulgarian/English business website — services, process, media gallery and contact — built for a hoof health management company, redesigned in 2026 with a full English version, before/after comparison and cookie consent.",
     url: "https://www.hrumstudio.online/work/kzm",
     siteName: "HRUM STUDIO",
     type: "website",
@@ -32,14 +32,16 @@ export default function KzmPage() {
           <h1>Corporate site for hoof health management.</h1>
 
           <p className="product-lede">
-            A bilingual Bulgarian/English business website built for a
-            company specialising in cattle hoof health management —
-            services, process, media gallery and contact, all in one place.
+            A bilingual Bulgarian/English business website for a company
+            specialising in cattle hoof health management — services,
+            process, a before/after comparison, field gallery and contact.
+            Redesigned in November 2026.
           </p>
 
           <div className="case-tags">
             <span>Bilingual BG/EN</span>
             <span>Corporate site</span>
+            <span>Redesign 2026</span>
           </div>
         </header>
 
@@ -75,7 +77,7 @@ export default function KzmPage() {
               <span className="feature-number">01</span>
               <h3>Bilingual BG/EN toggle</h3>
               <p>
-                Every page is available in both Bulgarian and English, with a
+                The full site is available in Bulgarian and English, with a
                 simple language switch that remembers the visitor&apos;s
                 choice.
               </p>
@@ -94,8 +96,9 @@ export default function KzmPage() {
               <span className="feature-number">03</span>
               <h3>Media gallery</h3>
               <p>
-                A gallery of real photos and videos showing the work in
-                practice, rather than generic stock imagery.
+                A gallery of real photos from the field that open in a
+                full-screen lightbox, plus project videos that only load from
+                YouTube when clicked.
               </p>
             </div>
 
@@ -107,6 +110,26 @@ export default function KzmPage() {
                 the site, in Bulgarian or English.
               </p>
             </div>
+
+            <div className="product-feature">
+              <span className="feature-number">05</span>
+              <h3>Before/after comparison</h3>
+              <p>
+                A draggable before/after slider showing a hoof before and
+                after treatment, usable with the mouse, touch or keyboard
+                arrows.
+              </p>
+            </div>
+
+            <div className="product-feature">
+              <span className="feature-number">06</span>
+              <h3>Cookie consent</h3>
+              <p>
+                A clear cookie banner in both languages — Google Analytics
+                loads only after the visitor clicks Accept, and the choice can
+                be changed any time from the footer.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -116,12 +139,14 @@ export default function KzmPage() {
           </div>
 
           <div>
-            <h2>Live and in use.</h2>
+            <h2>Live and in use — redesigned in November 2026.</h2>
 
             <p>
-              The site has been live since launch and is actively used by
-              KZM to present the business and take enquiries from both
-              Bulgarian and international clients.
+              The site has been live since launch and is used by KZM to
+              present the business and receive consultation requests. On 7
+              November 2026 it moved to a new design, with a full English
+              version, a link to the upcoming shop at shop.kzm.bg, and
+              git-based deploys so updates go live without manual uploads.
             </p>
           </div>
         </section>
@@ -135,9 +160,9 @@ export default function KzmPage() {
             <figure>
               <Image
                 src="/kzm-hero.png"
-                alt="KZM homepage hero section"
-                width={3803}
-                height={1330}
+                alt="KZM homepage hero with a hoof trimmer at work and the headline “Здравото стадо започва от копитото”"
+                width={1920}
+                height={672}
               />
               <figcaption>Homepage hero</figcaption>
             </figure>
@@ -145,31 +170,31 @@ export default function KzmPage() {
             <figure>
               <Image
                 src="/kzm-about.png"
-                alt="KZM about section describing hoof health services"
-                width={3785}
-                height={1386}
+                alt="KZM about section with company background, key points and partner logos"
+                width={1920}
+                height={703}
               />
-              <figcaption>About / services overview</figcaption>
+              <figcaption>About</figcaption>
             </figure>
 
             <figure>
               <Image
                 src="/kzm-gallery.png"
-                alt="KZM media gallery with field photos"
-                width={3806}
-                height={1448}
+                alt="KZM “От терена” gallery with photos of the team at work on farms"
+                width={1920}
+                height={731}
               />
-              <figcaption>Media gallery</figcaption>
+              <figcaption>Field gallery</figcaption>
             </figure>
 
             <figure className="product-screens-narrow">
               <Image
-                src="/kzm-chat.png"
-                alt="KZM AI chat assistant widget"
-                width={716}
-                height={992}
+                src="/kzm-before-after.png"
+                alt="Before/after hoof comparison slider with the divider at the midpoint"
+                width={720}
+                height={1001}
               />
-              <figcaption>AI chat assistant</figcaption>
+              <figcaption>Before / after</figcaption>
             </figure>
           </div>
         </section>

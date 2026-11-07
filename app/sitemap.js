@@ -7,6 +7,18 @@ export default function sitemap() {
       priority: 1,
     },
     {
+      url: "https://www.hrumstudio.online/work/kzm",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: "https://www.hrumstudio.online/work/musematics",
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: "https://www.hrumstudio.online/products/shotfactory",
       lastModified: new Date(),
       changeFrequency: "monthly",

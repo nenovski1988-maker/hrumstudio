@@ -7,6 +7,8 @@ import { animate, stagger } from "animejs";
 // children = анимира децата един след друг (stagger) вместо целия блок.
 const GROUPS = [
   { selector: ".work-head" },
+  { selector: ".carousel-controls" },
+  { selector: ".carousel-track", children: ".carousel-slide" },
   { selector: ".product-features", children: ".product-feature" },
   { selector: ".capabilities-cta" },
   { selector: ".ai-note-portrait" },

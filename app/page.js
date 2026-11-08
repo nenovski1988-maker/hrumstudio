@@ -1,5 +1,6 @@
 import Image from "next/image";
 import CaseCarousel from "./components/CaseCarousel";
+import ScrollReveal from "./components/ScrollReveal";
 
 const work = [
   {
@@ -433,6 +434,9 @@ product.
           <span>hrumstudio.online</span>
         </div>
       </footer>
+
+      {/* Scroll анимации (anime.js) */}
+      <ScrollReveal />
     </>
   );
 }

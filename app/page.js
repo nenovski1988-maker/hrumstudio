@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CaseCarousel from "./components/CaseCarousel";
 import ScrollReveal from "./components/ScrollReveal";
+import HeroIntro from "./components/HeroIntro";
 
 const work = [
   {
@@ -87,6 +88,11 @@ const products = [
   },
 ];
 
+// Скрива черния екран на интрото ОЩЕ ПРЕДИ страницата да се покаже,
+// ако интрото вече е гледано в този таб или е включено намалено движение.
+// (?intro в адреса пуска интрото винаги — за тестове)
+const introSkipScript = `(function(){try{var f=new URLSearchParams(location.search).has('intro');var s=sessionStorage.getItem('hrum-intro-seen')==='1';var r=window.matchMedia('(prefers-reduced-motion: reduce)').matches;if(!f&&(s||r)){var el=document.getElementById('hero-intro');if(el)el.style.display='none';}}catch(e){}})();`;
+
 const structuredData = {
   "@context": "https://schema.org",
   "@graph": [
@@ -123,6 +129,13 @@ const structuredData = {
 export default function Home() {
   return (
     <>
+      {/* Hero интро (anime.js) — трябва да е първо в страницата */}
+      <HeroIntro />
+      <script dangerouslySetInnerHTML={{ __html: introSkipScript }} />
+      <noscript>
+        <style>{`#hero-intro{display:none}`}</style>
+      </noscript>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

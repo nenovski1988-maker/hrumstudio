@@ -121,21 +121,9 @@ export default function CaseCarousel({ items }) {
     return () => track.removeEventListener("scroll", onScroll);
   }, [cardStep]);
 
-  // vertical mouse-wheel over the carousel moves it horizontally instead of
-  // scrolling the page — the "feels cool" bit
-  useEffect(() => {
-    const track = trackRef.current;
-    if (!track) return;
-
-    const onWheel = (e) => {
-      if (Math.abs(e.deltaY) <= Math.abs(e.deltaX)) return;
-      e.preventDefault();
-      track.scrollLeft += e.deltaY;
-    };
-
-    track.addEventListener("wheel", onWheel, { passive: false });
-    return () => track.removeEventListener("wheel", onWheel);
-  }, []);
+  // NOTE: the mouse wheel is intentionally NOT hijacked — vertical wheel always
+  // scrolls the page. The carousel moves with the arrows, mouse drag and
+  // native horizontal trackpad swipes.
 
   // click-and-drag scrolling with the mouse
   const onPointerDown = (e) => {

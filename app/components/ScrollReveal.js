@@ -5,10 +5,12 @@ import { animate, stagger } from "animejs";
 
 // Кои блокове да се появяват при скрол.
 // children = анимира децата един след друг (stagger) вместо целия блок.
+// noScale  = без мащабиране (за карусела — scale пречи на scroll-snap и
+//            картите подскачат в края на анимацията)
 const GROUPS = [
   { selector: ".work-head" },
   { selector: ".carousel-controls" },
-  { selector: ".carousel-track", children: ".carousel-slide" },
+  { selector: ".carousel-track", children: ".carousel-slide", noScale: true },
   { selector: ".product-features", children: ".product-feature" },
   { selector: ".capabilities-cta" },
   { selector: ".ai-note-portrait" },
@@ -31,10 +33,10 @@ export default function ScrollReveal() {
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
     if (!("IntersectionObserver" in window)) return;
 
-    // блок -> елементи за анимиране
+    // блок -> { targets, useScale }
     const pending = new Map();
 
-    GROUPS.forEach(({ selector, children }) => {
+    GROUPS.forEach(({ selector, children, noScale }) => {
       document.querySelectorAll(selector).forEach((el) => {
         // Ако блокът вече е на екрана при зареждане — не го пипаме
         if (el.getBoundingClientRect().top < window.innerHeight) return;
@@ -44,12 +46,16 @@ export default function ScrollReveal() {
           : [el];
         if (!targets.length) return;
 
+        const useScale = !noScale;
+
         targets.forEach((t) => {
           t.style.opacity = "0";
-          t.style.transform = `translateY(${OFFSET}px) scale(${START_SCALE})`;
+          t.style.transform = useScale
+            ? `translateY(${OFFSET}px) scale(${START_SCALE})`
+            : `translateY(${OFFSET}px)`;
         });
 
-        pending.set(el, targets);
+        pending.set(el, { targets, useScale });
       });
     });
 
@@ -58,19 +64,21 @@ export default function ScrollReveal() {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
 
-          const targets = pending.get(entry.target);
+          const group = pending.get(entry.target);
           observer.unobserve(entry.target);
           pending.delete(entry.target);
-          if (!targets) return;
+          if (!group) return;
 
-          animate(targets, {
+          const params = {
             opacity: [0, 1],
             translateY: [OFFSET, 0],
-            scale: [START_SCALE, 1],
             duration: DURATION,
             delay: stagger(STAGGER),
             ease: EASE,
-          });
+          };
+          if (group.useScale) params.scale = [START_SCALE, 1];
+
+          animate(group.targets, params);
         });
       },
       { rootMargin: `0px 0px ${TRIGGER} 0px` }
@@ -81,7 +89,7 @@ export default function ScrollReveal() {
     return () => {
       observer.disconnect();
       // връщаме всичко видимо, ако компонентът се демонтира
-      pending.forEach((targets) =>
+      pending.forEach(({ targets }) =>
         targets.forEach((t) => {
           t.style.opacity = "";
           t.style.transform = "";
